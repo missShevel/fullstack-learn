@@ -11,7 +11,7 @@ let sum1 = (a, b) => {
     return result;
 };
 
-let sum2 = (a, b) => { return `${a}^2 + ${b}^2 = ${Math.pow(a, 2) + Math.pow(b, 2)}`};
+let sum2 = (a, b) => `${a}^2 + ${b}^2 = ${Math.pow(a, 2) + Math.pow(b, 2)}`
 
 sum1(a, b);
 
