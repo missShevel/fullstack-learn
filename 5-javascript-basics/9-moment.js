@@ -13,9 +13,9 @@ console.log(addedDate);
 now.add(2, 'days').add(4, 'hours').add(3, 'minutes');
 console.log(now);
 
-const date1 = moment("2023-08-08", "YYY-MM-DD");
-const date2 = moment("2022-01-09", "YYY-MM-DD");
+const date1 = moment("2023-08-08", "YYYY-MM-DD");
+const date2 = moment("2022-01-09", "YYYY-MM-DD");
 
 console.log(date1.isBefore(date2));
 console.log(date1.isSame(date2));
-
+console.log(date1.diff(date2, 'days'));
