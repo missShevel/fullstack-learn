@@ -1,0 +1,24 @@
+{
+  "name": "fullstack-learn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missShevel/fullstack-learn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missShevel/fullstack-learn/issues"
+  },
+  "homepage": "https://github.com/missShevel/fullstack-learn#readme",
+  "description": "",
+  "dependencies": {
+    "moment": "^2.29.4"
+  },
+  "type": "module"
+}
