@@ -1,7 +1,13 @@
-const delay = (ms) => {
-    return new Promise(resolve => {
-        setTimeout(resolve, ms);
-    })
+const delay = async (ms) => {
+    // return new Promise(resolve => {
+    //     setTimeout(resolve, ms);
+    // })
+    // return Promise.resolve(setTimeout(() => {}, ms));
+    setTimeout(()=>{}, ms);
 };
 
-delay(3000).then(() => console.log(1));
+(async () => {
+    await delay(3000);
+    console.log(1);
+
+})();

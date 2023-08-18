@@ -1,19 +1,18 @@
-const complexMath = (n) => {
-  new Promise((resolve) => {
+const complexMath = async (n) => {
+  let res = await new Promise((resolve) => {
     setTimeout(() => {
-      let result = n + n;
+      const result = n + n;
       console.log(result);
       resolve(result);
     }, 5000);
   })
-  .then((result) => new Promise((resolve) => {
+  const newResult = await new Promise((resolve) => {
       setTimeout(() => {
-        result = result * 2;
-        console.log(result);
-        resolve(result);
+        res = res * 2;
+        resolve(res);
       }, 5000)
     })
-  );
+    console.log(newResult);
 };
 
 complexMath(2);
