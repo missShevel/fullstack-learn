@@ -18,7 +18,9 @@
   "homepage": "https://github.com/missShevel/fullstack-learn#readme",
   "description": "",
   "dependencies": {
-    "moment": "^2.29.4"
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "request-ip": "^3.3.0"
   },
   "type": "module"
 }
