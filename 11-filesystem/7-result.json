@@ -1,0 +1,5 @@
+[
+  { "username": "user1", "salary": 34000 },
+  { "username": "user2", "salary": 44000 },
+  { "username": "user3", "salary": 13000 }
+]
