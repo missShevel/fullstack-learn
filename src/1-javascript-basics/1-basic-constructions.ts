@@ -1,17 +1,17 @@
 /* Variables*/
-let a = 5;
-let b = 10;
+let a: number = 5;
+let b: number = 10;
 console.log(`a value ${a}`);
 console.log(`b value ${b}`);
 
 b = a
 console.log(`now b equals ${b}`);
 
-const c = b
+const c: number = b
 console.log(`c value is always ${c}`);
 
 /* if statements */
-let weather = "cold"
+let weather: string = "cold"
 if (weather === "cold") {
     console.log("Wear a coat");
 } else {
@@ -23,7 +23,7 @@ const output = (weather === "cold") ? "Wear a coat" : "Wear a T-shirt";
 console.log(output);
 
 /* Loops */
-const heroes = ["Ladybug", "Cat Noir", "Rena Rouge", "Spiderman", "Iron Man"];
+const heroes: Array<string> = ["Ladybug", "Cat Noir", "Rena Rouge", "Spiderman", "Iron Man"];
 let i = 0;
 
 while (i < heroes.length) {
@@ -39,7 +39,7 @@ for (let hero of heroes) {
     console.log(`for of ${hero}`);
 }
 
-const heroesObj = {
+const heroesObj: Record<string, string> = {
     "Ladybug": "Miraculous",
     "Cat Noir": "Miraculous", 
     "Rena Rouge": "Miraculous", 
@@ -51,9 +51,11 @@ for (const hero in heroesObj) {
     console.log(`for in ${hero}: ${heroesObj[hero]}`);
 }
 
-let value = 10;
-const operator = "/";
-let value2 = 3;
+type Operator = '/' | '*' | '+' | '-';
+
+let value: number = 10;
+let operator: Operator = '/' as Operator;
+let value2: number = 3;
 
 /* Switch */
 switch(operator) {
@@ -69,4 +71,8 @@ switch(operator) {
     case '/':
         console.log(`${value} / ${value2} = ${value / value2}`);
         break;
+    default:
+        throw new Error();
 }
+
+export {}

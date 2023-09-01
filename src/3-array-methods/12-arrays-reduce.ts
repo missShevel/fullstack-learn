@@ -1,13 +1,18 @@
-const arr = [1,2,3,4,5];
+const arr: number[] = [1,2,3,4,5];
 
-const sum = arr.reduce((prev, curr) => prev + curr, 0);
+const sum: number = arr.reduce((prev, curr) => prev + curr, 0);
 console.log(sum);
 
-const mult = arr.reduce((prev, curr) => prev * curr, 1);
+const mult: number = arr.reduce((prev, curr) => prev * curr, 1);
 console.log(mult);
 
+type UserRecord = {
+	id: number
+	name: string,
+};
+
 // start array
-const arr2 = [
+const arr2: UserRecord[] = [
 	{
 		id: 11,
 		name: 'John'
@@ -21,7 +26,7 @@ const arr2 = [
 		name: 'Pasha'
 	}
 ];
-const hashTable = arr2.reduce((prev, curr) => {
+const hashTable: Record<number, UserRecord> = arr2.reduce((prev, curr) => {
         return {
             ...prev,
             [curr.id]: curr 
@@ -30,3 +35,5 @@ const hashTable = arr2.reduce((prev, curr) => {
 
 // const hashTable = arr2.reduce((prev, curr) => ({...prev,[curr.id]: curr}), {}); can we do it in one line?
 console.log(hashTable);
+
+export {}

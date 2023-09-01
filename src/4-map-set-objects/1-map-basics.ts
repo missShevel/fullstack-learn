@@ -1,4 +1,4 @@
-const map = new Map();
+const map: Map<string, number> = new Map();
 map.set("banana", 1);
 map.set("orange", 2);
 map.set("kiwi", 5);
@@ -13,3 +13,5 @@ map.delete("kiwi");
 console.log(map.size);
 map.clear();
 console.log(map);
+
+export {}

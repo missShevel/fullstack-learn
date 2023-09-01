@@ -1,4 +1,4 @@
-const map = new Map();
+const map: Map <{name: string, city: string}, number> = new Map();
 
 const obj1 = {name: "Linda", city: "London"};
 const obj2 = {name: "Neil", city: "Birkenhead"};
@@ -11,3 +11,4 @@ console.log(map.has(obj2));
 
 console.log(map);
 
+export {}
