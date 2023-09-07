@@ -1,10 +1,10 @@
-import express from "express"
+import express, { type Response, type Request } from "express"
 import fs from 'node:fs/promises'
 
 const app = express();
 const port = 8000;
 
-app.post("/text", (req, res) => {
+app.post("/text", (req: Request, res: Response) => {
   res.status(201).send("Чисник.");
 });
 

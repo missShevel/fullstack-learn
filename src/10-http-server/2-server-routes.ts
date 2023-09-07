@@ -2,7 +2,8 @@ import http from "http";
 
 const hostname = "127.0.0.1";
 const port = 8000;
-const routes = {
+
+const routes: any = {
   "/": {
     GET: "<h1>Chysnyk</h1><h2>Cybulya</h2>",
   },
@@ -16,16 +17,22 @@ const routes = {
   },
 };
 
-const types = {
-  string: (s) => s,
-  object: (obj) => JSON.stringify(obj),
+const types: Record<string, (data: any) => string> = {
+  string: (s: string): string => s,
+  object: (obj: object): string => JSON.stringify(obj),
 };
+
+type Data = string | object;
+
 
 const server = http.createServer((req, res) => {
   const { url, method } = req;
-  const data = routes[url][method];
+  if (!url || !method) {
+    return res.end("Error")
+  }
+  const data: Data = routes[url][method];
   const type = typeof data;
-  const serializer = types[type];
+  const serializer = types[type as keyof typeof types];
   const result = serializer(data);
 
   res.end(result);
@@ -34,3 +41,5 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server is running on http://${hostname}:${port}`);
 });
+
+export {};
