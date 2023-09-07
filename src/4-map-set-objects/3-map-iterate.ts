@@ -1,4 +1,4 @@
-const map = new Map([
+const map: Map<string, number> = new Map([
     ["cucumber", 500],
     ["tomato", 350],
     ["onion", 50]
@@ -7,3 +7,5 @@ const map = new Map([
 for(let entry of map) {
     console.log(entry);
 }
+
+export {}

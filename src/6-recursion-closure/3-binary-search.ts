@@ -1,4 +1,4 @@
-function generateArr(len) {
+function generateArr(len: number): number[] {
     const arr = [];
     for(let i = 0; i < len; i++){
         arr.push(i);
@@ -6,8 +6,8 @@ function generateArr(len) {
     return arr;
 }
 
-function binarySearch(arr, el) {
-    var mid = Math.floor(arr.length / 2);
+function binarySearch(arr:number[], el: number) {
+    const mid = Math.floor(arr.length / 2);
     
     if (arr[mid] === el) {
         return arr[mid];
@@ -22,3 +22,5 @@ function binarySearch(arr, el) {
 
 const arr = generateArr(100);
 console.log(binarySearch(arr, 5));
+
+export {}

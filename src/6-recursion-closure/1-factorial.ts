@@ -1,4 +1,4 @@
-function factorial(n) {
+function factorial(n: number): number {
     if (n === 1) {
         return n;
     } else {
@@ -7,7 +7,3 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
-
-{
-    
-}
